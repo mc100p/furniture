@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:furniture/pages/homepage.dart';
+import 'package:furniture/pages/homepage/homepage.dart';
+import 'package:furniture/utils/magic_string.dart';
 import 'package:furniture/utils/route_generator.dart';
 
 void main() {
@@ -14,12 +15,11 @@ class MyApp extends StatelessWidget {
       title: 'Furniture',
       theme: ThemeData(
         primaryColor: Colors.black,
-        accentColor: Colors.grey[200],
         colorScheme: ColorScheme.light(
           primary: Colors.black,
-        ),
+        ).copyWith(secondary: Colors.grey[200]),
       ),
-      initialRoute: '/',
+      initialRoute: RouteNames.homepage,
       onGenerateRoute: RouteGenerator.generateRoute,
       home: HomePage(),
     );
