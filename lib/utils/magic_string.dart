@@ -1,5 +1,5 @@
 class RouteNames {
-  static const String homepage = 'homepage', detailPage = 'detailPage';
+  static const String homepage = '/', detailPage = 'detailPage';
 }
 
 class PageConstaints {

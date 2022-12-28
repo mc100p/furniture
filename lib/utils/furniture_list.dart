@@ -1,11 +1,11 @@
 class Products {
-  String imgUrl;
-  String name;
-  String tag;
-  double price;
-  String description;
-  int reviews;
-  double ratings;
+  late String imgUrl;
+  late String name;
+  late String tag;
+  late double price;
+  late String description;
+  late int reviews;
+  late double ratings;
 
   Products({
     required this.imgUrl,
@@ -16,6 +16,28 @@ class Products {
     required this.reviews,
     required this.ratings,
   });
+
+  Products.fromJson(Map<String, dynamic> json) {
+    imgUrl = json['imgUrl'];
+    name = json['name'];
+    tag = json['tag'];
+    price = json['price'];
+    description = json['description'];
+    reviews = json['reviews'];
+    ratings = json['ratings'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final data = <String, dynamic>{};
+    data['imgUrl'] = imgUrl;
+    data['name'] = name;
+    data['tag'] = tag;
+    data['price'] = price;
+    data['description'] = description;
+    data['reviews'] = reviews;
+    data['ratings'] = ratings;
+    return data;
+  }
 }
 
 //Lamps

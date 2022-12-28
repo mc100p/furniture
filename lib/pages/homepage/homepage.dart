@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:furniture/pages/bookmark.dart';
-import 'package:furniture/pages/details/details.dart';
 import 'package:furniture/pages/homepage/homepage_header.dart';
 import 'package:furniture/pages/notification.dart';
 import 'package:furniture/pages/profile.dart';
@@ -8,6 +7,7 @@ import 'package:furniture/utils/furniture_icons.dart';
 import 'package:furniture/utils/furniture_list.dart';
 import 'package:furniture/utils/icons.dart';
 import 'package:furniture/utils/magic_string.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -85,7 +85,7 @@ class _HomeContentState extends State<HomeContent> {
     });
   }
 
-  List get itemList {
+  List<Products> get itemList {
     if (currentTag == "All") return products;
     return products.where((e) => e.tag == currentTag).toList();
   }
@@ -178,12 +178,10 @@ class _HomeContentState extends State<HomeContent> {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, RouteNames.detailPage,
-                        arguments: Details(
-                          itemList: itemList[index],
-                        ));
-                  },
+                  onTap: () => context.pushNamed(
+                    RouteNames.detailPage,
+                    extra: itemList[index],
+                  ),
                   child: Column(
                     children: [
                       Expanded(
@@ -333,10 +331,13 @@ class _HomeContentState extends State<HomeContent> {
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, RouteNames.detailPage,
-                        arguments: Details(
-                          itemList: itemList[index],
-                        ));
+                    // Navigator.pushNamed(context, RouteNames.detailPage,
+                    //     arguments: Details(
+                    //       itemList: itemList[index],
+                    //     ));
+
+                    context.pushNamed(RouteNames.detailPage,
+                        extra: itemList[index]);
                   },
                   child: Column(
                     children: [

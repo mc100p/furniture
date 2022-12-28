@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:furniture/utils/furniture_icons.dart';
+import 'package:furniture/utils/furniture_list.dart';
 import 'package:furniture/utils/magic_string.dart';
 
 Future<dynamic> photoPopUp(
-    BuildContext context, String tag, BoxConstraints constraints, Size size) {
+    BuildContext context, Products tag, BoxConstraints constraints, Size size) {
   return showDialog(
     context: context,
     builder: (builder) {
@@ -18,12 +19,12 @@ Future<dynamic> photoPopUp(
                 shrinkWrap: true, // <-- Set this to true
                 children: [
                   Hero(
-                    tag: tag,
+                    tag: tag.imgUrl,
                     child: InteractiveViewer(
                       child: AspectRatio(
                         aspectRatio: 4 / 3,
                         child: Image.asset(
-                          tag,
+                          tag.imgUrl,
                           fit: BoxFit.fitHeight,
                           // height: size.height * 0.50,
                           // width: double.maxFinite,
@@ -59,7 +60,7 @@ Future<dynamic> photoPopUp(
   );
 }
 
-Align image(Size size, String tag, BoxConstraints constraints) {
+Align image(Size size, Products tag, BoxConstraints constraints) {
   return Align(
     alignment: Alignment.topRight,
     child: SizedBox(
@@ -71,9 +72,9 @@ Align image(Size size, String tag, BoxConstraints constraints) {
           bottomLeft: Radius.circular(50),
         ),
         child: Hero(
-          tag: tag,
+          tag: tag.imgUrl,
           child: Image.asset(
-            tag,
+            tag.imgUrl,
             fit: BoxFit.cover,
           ),
         ),

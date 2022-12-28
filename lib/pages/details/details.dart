@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:furniture/pages/details/details_components.dart';
+import 'package:furniture/utils/furniture_list.dart';
 
 class Details extends StatefulWidget {
-  final itemList;
+  final Products itemList;
 
   Details({required this.itemList});
 
@@ -44,8 +45,8 @@ class _DetailsState extends State<Details> {
                   children: [
                     GestureDetector(
                       onTap: () => photoPopUp(
-                          context, widget.itemList.imgUrl, constraints, size),
-                      child: image(size, widget.itemList.imgUrl, constraints),
+                          context, widget.itemList, constraints, size),
+                      child: image(size, widget.itemList, constraints),
                     ),
                     backArrow(context, size, constraints)
                   ],
