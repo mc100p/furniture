@@ -1,16 +1,22 @@
 PODS:
+  - coder_matthews_extensions (0.0.1):
+    - Flutter
   - Flutter (1.0.0)
 
 DEPENDENCIES:
+  - coder_matthews_extensions (from `.symlinks/plugins/coder_matthews_extensions/ios`)
   - Flutter (from `Flutter`)
 
 EXTERNAL SOURCES:
+  coder_matthews_extensions:
+    :path: ".symlinks/plugins/coder_matthews_extensions/ios"
   Flutter:
     :path: Flutter
 
 SPEC CHECKSUMS:
-  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  coder_matthews_extensions: f6ab96e190288a25bee3bb379e83303e49d03caf
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
 
 PODFILE CHECKSUM: ae273562e2241d2b1bd4b6d2d349a48b8fe1a2a7
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.14.3

@@ -10,13 +10,12 @@ Future<dynamic> photoPopUp(
     context: context,
     builder: (builder) {
       return AlertDialog(
-        //insetPadding: const EdgeInsets.all(20),
         content: Stack(
           children: [
             SizedBox(
               width: double.maxFinite,
               child: ListView(
-                shrinkWrap: true, // <-- Set this to true
+                shrinkWrap: true,
                 children: [
                   Hero(
                     tag: tag.imgUrl,
@@ -26,8 +25,6 @@ Future<dynamic> photoPopUp(
                         child: Image.asset(
                           tag.imgUrl,
                           fit: BoxFit.fitHeight,
-                          // height: size.height * 0.50,
-                          // width: double.maxFinite,
                         ),
                       ),
                     ),
@@ -289,10 +286,11 @@ Padding detailBody(
                 height: size.height * 0.10,
                 width: size.width * 0.70,
                 child: ElevatedButton(
-                  child: Text("Add to cart"),
+                  child: Text("Add to cart",
+                      style: TextStyle(color: Colors.white)),
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    primary: Theme.of(context).primaryColor,
+                    backgroundColor: Theme.of(context).primaryColor,
                   ),
                 ),
               ),

@@ -1,5 +1,24 @@
-class RouteNames {
-  static const String homepage = '/', detailPage = 'detailPage';
+enum RouteNames {
+  homepage,
+  detailPage,
+}
+
+enum IconWidgetsName {
+  All,
+  Chair,
+  Table,
+  Armchair,
+  Bed,
+  Lampstand,
+}
+
+enum IconWidgetsTag {
+  All,
+  Chair,
+  Table,
+  ArmChair,
+  Bed,
+  Lamp,
 }
 
 class PageConstaints {

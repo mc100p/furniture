@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture/utils/furniture_icons.dart';
+import 'package:furniture/utils/magic_string.dart';
 
 class IconWidget {
   IconData icon;
@@ -13,21 +14,35 @@ class IconWidget {
   });
 }
 
-final star = IconWidget(icon: Furniture.star, name: "All", tag: "All");
+final star = IconWidget(
+    icon: Furniture.star,
+    name: IconWidgetsName.All.name,
+    tag: IconWidgetsTag.All.name);
 
-final chair = IconWidget(icon: Furniture.chair, name: "Chair", tag: "Chair");
+final chair = IconWidget(
+    icon: Furniture.chair,
+    name: IconWidgetsName.Chair.name,
+    tag: IconWidgetsTag.Chair.name);
 
-final table = IconWidget(icon: Furniture.table, name: "Table", tag: "Table");
+final table = IconWidget(
+    icon: Furniture.table,
+    name: IconWidgetsName.Table.name,
+    tag: IconWidgetsTag.Table.name);
 
-final armChair =
-    IconWidget(icon: Furniture.sofa, name: "Armchair", tag: "ArmChair");
+final armChair = IconWidget(
+    icon: Furniture.sofa,
+    name: IconWidgetsName.Armchair.name,
+    tag: IconWidgetsTag.ArmChair.name);
 
-final bed = IconWidget(icon: Furniture.bed, name: "Bed", tag: "Bed");
+final bed = IconWidget(
+    icon: Furniture.bed,
+    name: IconWidgetsName.Bed.name,
+    tag: IconWidgetsTag.Bed.name);
 
 final lampStand = IconWidget(
   icon: Furniture.night_stand,
-  name: "Lampstand",
-  tag: "Lamp",
+  name: IconWidgetsName.Lampstand.name,
+  tag: IconWidgetsTag.Lamp.name,
 );
 
 List iconItems = [star, chair, table, armChair, bed, lampStand];

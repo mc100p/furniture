@@ -71,7 +71,7 @@ class HomeContent extends StatefulWidget {
 
 class _HomeContentState extends State<HomeContent> {
   List<Map> items = [];
-  String currentTag = 'All';
+  String currentTag = IconWidgetsTag.All.name;
 
   int _selectedIndex = 0;
 
@@ -86,13 +86,12 @@ class _HomeContentState extends State<HomeContent> {
   }
 
   List<Products> get itemList {
-    if (currentTag == "All") return products;
+    if (currentTag == IconWidgetsTag.All.name) return products;
     return products.where((e) => e.tag == currentTag).toList();
   }
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return SafeArea(
       top: true,
       child: Scaffold(
@@ -178,10 +177,10 @@ class _HomeContentState extends State<HomeContent> {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: InkWell(
-                  onTap: () => context.pushNamed(
-                    RouteNames.detailPage,
-                    extra: itemList[index],
-                  ),
+                  onTap: () {
+                    context.pushNamed(RouteNames.detailPage.name,
+                        extra: itemList[index]);
+                  },
                   child: Column(
                     children: [
                       Expanded(
@@ -331,12 +330,7 @@ class _HomeContentState extends State<HomeContent> {
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: InkWell(
                   onTap: () {
-                    // Navigator.pushNamed(context, RouteNames.detailPage,
-                    //     arguments: Details(
-                    //       itemList: itemList[index],
-                    //     ));
-
-                    context.pushNamed(RouteNames.detailPage,
+                    context.pushNamed(RouteNames.detailPage.name,
                         extra: itemList[index]);
                   },
                   child: Column(

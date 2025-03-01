@@ -1,3 +1,5 @@
+import 'package:furniture/utils/magic_string.dart';
+
 class Products {
   late String imgUrl;
   late String name;
@@ -44,7 +46,7 @@ class Products {
 final lamp_1 = Products(
   imgUrl: "images/lamp_1.jpg",
   name: "Black Simple Lamp",
-  tag: "Lamp",
+  tag: IconWidgetsTag.Lamp.name,
   price: 12.00,
   description: "Simple and elegant, a pair of cute little table lamps can"
       " definitely be integrated into any home decoration, practical, and add a"
@@ -57,7 +59,7 @@ final lamp_1 = Products(
 final chair_1 = Products(
     imgUrl: "images/chair_1.jpg",
     name: "Coffee Chair",
-    tag: "Chair",
+    tag: IconWidgetsTag.Chair.name,
     description: "Bohemiana is rhapsody for your home. Heres to the misfits and"
         " the rebels, the rule-breakers, the square pegs in the round holes, the"
         " ones who see things differently. Bohemiana is a collection thats just"
@@ -70,7 +72,7 @@ final chair_1 = Products(
 final chair_2 = Products(
     imgUrl: "images/chair_2.jpg",
     name: "Brown Chair",
-    tag: "Chair",
+    tag: IconWidgetsTag.Chair.name,
     description: "Bohemiana is rhapsody for your home. Heres to the misfits and"
         " the rebels, the rule-breakers, the square pegs in the round holes, the"
         " ones who see things differently. Bohemiana is a collection thats just"
@@ -85,7 +87,7 @@ final chair_2 = Products(
 final bed_1 = Products(
     imgUrl: "images/bed_1.jpg",
     name: "Giselle Antique",
-    tag: "Bed",
+    tag: IconWidgetsTag.Bed.name,
     description: "This charming old-school antique iron bed offers a classic"
         " style that looks fabulous in a rustic or traditional home. The antique"
         " bronze finish gives this bed frame a truly vintage look that appears"
@@ -99,7 +101,7 @@ final bed_1 = Products(
 final bed_2 = Products(
     imgUrl: "images/bed_2.jpg",
     name: "Montauk Panel Bed",
-    tag: "Bed",
+    tag: IconWidgetsTag.Bed.name,
     description: "Bring country charm to your bedroom decor with this stylish"
         " Montauk panel bed. Crafted from solid pine wood, the king-size bed"
         " features a slat-style headboard and footboard, available in a variety"
@@ -112,7 +114,7 @@ final bed_2 = Products(
 final bed_3 = Products(
     imgUrl: "images/bed_3.jpg",
     name: "French Classic",
-    tag: "Bed",
+    tag: IconWidgetsTag.Bed.name,
     description: "Update the look of your bedroom with this Ayrshire Downs"
         " platform bed from The Gray Barn. Designed to be used without a box"
         " spring, the elegant bed is made from solid rubberwood, plywood,"
@@ -125,7 +127,7 @@ final bed_3 = Products(
 final bed_4 = Products(
     imgUrl: "images/bed_4.jpg",
     name: "Wol Classic",
-    tag: "Bed",
+    tag: IconWidgetsTag.Bed.name,
     description: "Update the look of your bedroom with this Ayrshire Downs"
         " platform bed from The Gray Barn. Designed to be used without a box"
         " spring, the elegant bed is made from solid rubberwood, plywood,"
@@ -139,7 +141,7 @@ final bed_4 = Products(
 final armChair_1 = Products(
     imgUrl: "images/armChair_1.jpg",
     name: "Leather Mid Century",
-    tag: "ArmChair",
+    tag: IconWidgetsTag.ArmChair.name,
     description: "Add this contemporary-designed chair to your office, living"
         " room or  bedroom to breathe new life into a boring space, or create"
         " an intimate  conversation nook by pairing two chairs together. ",
@@ -150,7 +152,7 @@ final armChair_1 = Products(
 final armChair_2 = Products(
     imgUrl: "images/armChair_2.jpg",
     name: "Ariana Parson",
-    tag: "ArmChair",
+    tag: IconWidgetsTag.ArmChair.name,
     description: "Update the look of your bedroom with this Ayrshire Downs"
         " platform bed from The Gray Barn. Designed to be used without a box"
         " spring, the elegant bed is made from solid rubberwood, plywood,"
@@ -163,7 +165,7 @@ final armChair_2 = Products(
 final armChair_3 = Products(
     imgUrl: "images/armChair_3.jpg",
     name: "WYNDENHALL",
-    tag: "ArmChair",
+    tag: IconWidgetsTag.ArmChair.name,
     description:
         "This accent chair features pocket coils, high density foam and"
         " webbing surrounded by thick batting for luxurious comfort and durability."
@@ -177,7 +179,7 @@ final armChair_3 = Products(
 final table_1 = Products(
     imgUrl: "images/table_1.jpg",
     name: "Minimal Stand",
-    tag: "Table",
+    tag: IconWidgetsTag.Table.name,
     description: "Minimal Stand is made of by natural wood. The design that is"
         " very simple and minimal. This is truly one of the best furnitures in any "
         "family for now. With 3 different colors, you can easily select the best "
@@ -189,7 +191,7 @@ final table_1 = Products(
 final table_2 = Products(
     imgUrl: "images/table_2.jpg",
     name: "Simple Desk",
-    tag: "Table",
+    tag: IconWidgetsTag.Table.name,
     description: "This desk is a great choice for home office activities,"
         " including writing. This simple frame design is easy to move and save"
         " space. This desk is the best choice for a small apartment, which doesn't"
